@@ -1,0 +1,245 @@
+/********* QUICK RESET *********/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+h1, h2, h3{
+    font-family: 'Arima Madurai', cursive;
+}
+button{
+    border: none;
+    outline: none;
+}
+ul{
+    list-style:none;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #333;
+}
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+/************ MAIN CONTENT ***************/
+.main-container{
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 30px 0 0 30px;
+}
+.main-container.show-nav{
+    transform: rotate(-20deg);
+}
+
+/* Navigation icon */
+.main-container .container-navigation{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+.container-navigation .circle{
+    background-color: #000;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+.main-container.show-nav .circle{
+    transform: rotate(-70deg);
+}
+
+.container-navigation .circle .open,
+.container-navigation .circle .close{
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    height: 100px;
+    text-align: center;
+}
+.container-navigation .circle i{
+    color: #fff;
+    font-size: 2rem;
+}
+.container-navigation .circle .close{
+    top: 68%;
+    left: 38%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+/************ NAVIGATION ***************/
+.main-container.show-nav + nav li{
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 30;
+}
+nav .main-nav{
+    padding-left: 30px;
+}
+nav .main-nav li{
+    margin: 5px 0;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+}
+nav .main-nav li:hover{
+    color: #333;
+    background-color: #fff;
+}
+/* POSTS AND ASIDE */
+main{
+    display: flex;
+    justify-content: space-between;
+}
+main .container-posts{
+    flex: 3;
+}
+main .container-posts h1{
+    margin-top: 30px;
+}
+main .container-posts article{
+    border-bottom: 1px solid #000;
+    padding: 30px 0 10px 0;
+    width: 80%;
+}
+main .container-posts article header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 370px;
+    overflow: hidden;
+}
+main .container-posts article header img{
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+}
+main .container-posts article .body-article{
+   padding: 20px 0;
+}
+
+main aside{
+    flex: 1;
+    padding: 30px 0;
+    border: 1px solid #000;
+    height: max-content;
+}
+main aside .container-right{
+    width: 80%;
+    margin: 0 auto;
+}
+
+main aside .container-right>div{
+    margin: 40px 0;
+}
+main aside .container-right>div h3{
+    text-align: center;
+    border: 1px solid #000;
+    padding: 5px 0;
+    border-radius: 20px;
+}
+main aside .container-right .about p{
+    text-align: center;
+    padding: 15px 0;
+}
+main aside .container-right .about ul{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+main aside .container-right .about ul li i{
+    font-size: 1.2rem;
+}
+main aside .container-right .popular-article .wrapper{
+    padding: 15px 0;
+    cursor: pointer;
+}
+main aside .container-right .explore-topics ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px
+}
+main aside .container-right .explore-topics ul li{
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 5px 7px;
+    font-weight: 700;
+}
+main .toTop{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .toTop a i{
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer{
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    margin-top: 60px;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.8;
+}
+footer div ul{
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+footer div ul li a{
+    font-size: 1.4rem;
+}
