@@ -1,11 +1,11 @@
 # 50 Projects in 50 Days by Brad Traversy
-## Day 1 : Expanding cards
+## Description
 
 Afin de revoir les notions de base en Javascript, je me suis (re) lancée dans le projet "50 projects in 50 days" de Brad Traversy [voir son GitHub](https://github.com/bradtraversy).
 
 ## Avancée
 
-| #     | Done               |
+| #     | Done               |  
 | ----- | ------------------:|
 |  01   | :heavy_check_mark: |
 |  02   | :heavy_check_mark: |
